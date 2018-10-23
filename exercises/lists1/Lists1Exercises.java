@@ -4,6 +4,11 @@ public class Lists1Exercises {
       * to change. */
     public static IntList incrList(IntList L, int x) {
         /* Your code here. */
+        p=L.rest;
+        while(p!=NULL){
+            p.first=p.fitst+x;
+            p=p.rest;
+        }    
         return L;        
     }
 
@@ -12,6 +17,10 @@ public class Lists1Exercises {
       * the 'new' keyword. */
     public static IntList dincrList(IntList L, int x) {
         /* Your code here. */
+        p=L.rest;
+        while(p!=NULL){
+            p.first=p.first-x;
+        }
         return L;
     }
 
