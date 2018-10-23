@@ -4,7 +4,7 @@ public class Lists1Exercises {
       * to change. */
     public static IntList incrList(IntList L, int x) {
         /* Your code here. */
-        p=L.rest;
+        p=L;/**有头指针，p指向的就是第一个节点*/
         while(p!=NULL){
             p.first=p.fitst+x;
             p=p.rest;
@@ -17,7 +17,7 @@ public class Lists1Exercises {
       * the 'new' keyword. */
     public static IntList dincrList(IntList L, int x) {
         /* Your code here. */
-        p=L.rest;
+        p=L;
         while(p!=NULL){
             p.first=p.first-x;
         }
