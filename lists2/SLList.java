@@ -32,13 +32,21 @@ public class SLList {
 		sentinel.next = new IntNode(x, null);
 		size = 1;
 	}
-
+	pubilc SLList(int[] a){
+		SLList();
+		for(int i=0,i<a.length,i++){
+			addFirst(a[i]);
+		}
  	/** Adds x to the front of the list. */
  	public void addFirst(int x) {
  		sentinel.next = new IntNode(x, sentinel.next);
  		size = size + 1;
  	}
-
+	public void deleteFirst(){
+		if(sentinel.next==null){
+			System.out.print("there is no element to delete");
+		}
+		sentinel.next=sentinel.next.next;
  	/** Returns the first item in the list. */
  	public int getFirst() {
  		return sentinel.next.item;
