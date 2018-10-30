@@ -31,8 +31,9 @@ public class AList {
     /** Deletes item from back of the list and
       * returns deleted item. */
     public int removeLast() {
+        int x=getLast();
         A.length-=1;
-        return A[A.length-1];
+        return x;
         
     }
 } 
