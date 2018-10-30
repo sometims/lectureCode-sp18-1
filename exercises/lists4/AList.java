@@ -4,19 +4,35 @@
 
 public class AList {
     /** Creates an empty list. */
+    private size=o;
+    private int[] A;
     public AList() {
         int[] A=int [100];
+        size=0;
+        
     }
-
+    public void resize(){
+        int[] a=new int[size*2];
+        System.arraycopy(A, 0, a, 0, size);
+        A=a;
+    }
+        
     /** Inserts X into the back of the list. */
     public void addLast(int x) {
-        A[A.length]=x;
-        A.length+=1;
+        if(size<A.length){
+            A[size]=x;
+            size+=1;
+        }
+        resize();
+        A[size]=x;
+        size=size+1;
+            
+        
     }
 
     /** Returns the item from the back of the list. */
     public int getLast() {
-        return A[A.length-1];        
+        return A[size-1];        
     }
     /** Gets the ith item in the list (0 is the front). */
     public int get(int i) {
@@ -25,14 +41,14 @@ public class AList {
 
     /** Returns the number of items in the list. */
     public int size() {
-        return A.length;        
+        return size;        
     }
 
     /** Deletes item from back of the list and
       * returns deleted item. */
     public int removeLast() {
         int x=getLast();
-        A.length-=1;
+        A.size-=1;
         return x;
         
     }
