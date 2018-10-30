@@ -5,25 +5,23 @@
 public class AList {
     /** Creates an empty list. */
     private size=o;
-    private int[] A;
+    private fanxin[] A;
     public AList() {
-        int[] A=int [100];
+        fanxin[] A=(fanxin []) new object [100];
         size=0;
         
     }
-    public void resize(){
-        int[] a=new int[size*2];
+    public void resize(int capacity){
+        fanxin[] a=(fanxin[]) new object [capacity];
         System.arraycopy(A, 0, a, 0, size);
         A=a;
     }
         
     /** Inserts X into the back of the list. */
-    public void addLast(int x) {
-        if(size<A.length){
-            A[size]=x;
-            size+=1;
-        }
-        resize();
+    public void addLast(fanxin x) {
+        if(size=A.length){
+            resize();
+        }      
         A[size]=x;
         size=size+1;
             
@@ -31,11 +29,11 @@ public class AList {
     }
 
     /** Returns the item from the back of the list. */
-    public int getLast() {
+    public fanxin getLast() {
         return A[size-1];        
     }
     /** Gets the ith item in the list (0 is the front). */
-    public int get(int i) {
+    public fanxin get(int i) {
         return A[i];        
     }
 
@@ -46,7 +44,7 @@ public class AList {
 
     /** Deletes item from back of the list and
       * returns deleted item. */
-    public int removeLast() {
+    public fanxin removeLast() {
         int x=getLast();
         A.size-=1;
         return x;
